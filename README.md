@@ -1,0 +1,2 @@
+# OpsWay CheckoutTiming
+## Magento extension

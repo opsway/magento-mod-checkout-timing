@@ -1,0 +1,16 @@
+{
+    "name": "opsway/magento-checkout-timing",
+    "license": "GPL",
+    "type": "magento-module",
+    "homepage": "https://github.com/opsway/magento-mod-checkout-timing",
+    "description": "Logging time in checkout steps",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors":[
+        {
+            "name": "OpsWay",
+            "email": "support@opsway.com"
+        }
+    ]
+}
