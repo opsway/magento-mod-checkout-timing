@@ -8,7 +8,7 @@ class OpsWay_CheckoutTiming_Model_Logging_SplunkLog extends Mage_Core_Model_Abst
     {
         Mage::dispatchEvent('splunk_log_default', array(
             'metric' => 'magento.checkout_time.' . $event,
-            'value'  => $diff
+            'value' => $diff
         ));
     }
 

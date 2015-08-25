@@ -7,9 +7,8 @@ class OpsWay_CheckoutTiming_Model_Logging extends Mage_Core_Model_Abstract
 
     public function __construct()
     {
-        // ToDo: extension config
-        $model = 'OpsWay_CheckoutTiming_Model_Logging_MageLog';
-        $this->logger = Mage::getModel($model);
+        $className = Mage::getStoreConfig('opsway_checkout_timing/settings/logger');
+        $this->logger = Mage::getModel($className);
     }
 
 

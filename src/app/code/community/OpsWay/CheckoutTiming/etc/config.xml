@@ -11,6 +11,11 @@
                 <class>OpsWay_CheckoutTiming_Model</class>
             </opsway_checkouttiming>
         </models>
+        <helpers>
+            <opsway_checkouttiming>
+                <class>OpsWay_CheckoutTiming_Helper</class>
+            </opsway_checkouttiming>
+        </helpers>
     </global>
     <frontend>
         <events>
