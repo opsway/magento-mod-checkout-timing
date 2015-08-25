@@ -26,13 +26,25 @@ class OpsWay_CheckoutTiming_Model_Logging extends Mage_Core_Model_Abstract
 
     public function log(Array $timing)
     {
+        $latestTime = 0;
         $clearTiming = $this->_defaultTiming;
         array_walk($clearTiming, function (&$item, $key, $timing) {
             if (array_key_exists($key, $timing)) {
                 $item = $timing[$key];
             }
         }, $timing);
-        $this->logger->log($clearTiming);
+
+        for ($i = 0; $i < count($clearTiming); $i++) {
+            $diff = $clearTiming[$i]['time'] - $latestTime;
+            if ($diff < 0 || $latestTime <= 0) {
+                $diff = 0;
+            }
+            if ($clearTiming[$i]['time'] > 0) {
+                $latestTime = $clearTiming[$i]['time'];
+            }
+            $this->logger->log($clearTiming[$i]['event'], $clearTiming[$i]['time'], $diff, $i);
+        }
+
     }
 
 }

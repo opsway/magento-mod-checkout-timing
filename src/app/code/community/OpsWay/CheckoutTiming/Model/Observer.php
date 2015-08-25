@@ -36,7 +36,7 @@ class OpsWay_CheckoutTiming_Model_Observer
         }
         $timing[$step] = array(
             'event' => $observer->event->name,
-            'time' => time()
+            'time' => microtime(true)
         );
         $session->setCheckoutTiming($timing);
         if ($step == count($this->events) - 1) {
