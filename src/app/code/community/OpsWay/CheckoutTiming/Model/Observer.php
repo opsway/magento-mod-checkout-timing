@@ -48,7 +48,7 @@ class OpsWay_CheckoutTiming_Model_Observer
             'time' => microtime(true)
         );
         $session->setCheckoutTiming($timing);
-        if ($step == count($this->events) - 1) {
+        if ($step == count($this->events) - 2) {
             $this->loggingModel->log($timing);
         }
     }

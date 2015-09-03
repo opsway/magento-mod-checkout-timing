@@ -11,6 +11,10 @@ class OpsWay_CheckoutTiming_Model_Source_Loggers
         array(
             'value' => 'OpsWay_CheckoutTiming_Model_Logging_SplunkLog',
             'label' => 'Splunk Logger'
+        ),
+        array(
+            'value' => 'OpsWay_CheckoutTiming_Model_Logging_CsvLog',
+            'label' => 'CSV Logger'
         )
     );
 

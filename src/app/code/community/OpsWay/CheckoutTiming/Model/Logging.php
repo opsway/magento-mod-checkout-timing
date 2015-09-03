@@ -33,6 +33,9 @@ class OpsWay_CheckoutTiming_Model_Logging extends Mage_Core_Model_Abstract
             }
         }, $timing);
 
+        if (method_exists($this->logger, 'beforeLog')) {
+            $this->logger->beforeLog();
+        }
         for ($i = 0; $i < count($clearTiming); $i++) {
             $diff = $clearTiming[$i]['time'] - $latestTime;
             if ($diff < 0 || $latestTime <= 0) {
@@ -43,7 +46,9 @@ class OpsWay_CheckoutTiming_Model_Logging extends Mage_Core_Model_Abstract
             }
             $this->logger->log($clearTiming[$i]['event'], $clearTiming[$i]['time'], $diff, $i);
         }
-
+        if (method_exists($this->logger, 'afterLog')) {
+            $this->logger->afterLog();
+        }
     }
 
 }

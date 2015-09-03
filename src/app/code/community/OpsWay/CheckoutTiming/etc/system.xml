@@ -44,6 +44,33 @@
                         </logger>
                     </fields>
                 </settings>
+                <csvlogger translate="label">
+                    <label>CSV logger settings</label>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <path translate="label">
+                            <label>File path</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Example: var/log/timing_report.csv</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </path>
+                        <delimiter translate="label">
+                            <label>Delimiter</label>
+                            <source_model>opsway_checkouttiming/source_csvDelimiters</source_model>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </delimiter>
+                    </fields>
+                </csvlogger>
             </groups>
         </opsway_checkout_timing>
     </sections>
